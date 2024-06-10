@@ -132,7 +132,8 @@ class CarlaRouteEnv(gym.Env):
             settings.fixed_delta_seconds = 1 / self.fps
             settings.synchronous_mode = True
             self.world.apply_settings(settings)
-            self.client.reload_world(False)  # reload map keeping the world settings
+            self.client.reload_world()  # reload map keeping the world settings
+            # self.client.reload_world)
             
             # self.world.set_weather(carla.WeatherParameters.MidRainyNoon)
 
